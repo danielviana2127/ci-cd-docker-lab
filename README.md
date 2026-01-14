@@ -4,6 +4,9 @@ Projeto prático de **CI/CD** utilizando **GitHub Actions** para automatizar o *
 
 Este laboratório foi criado com foco em **aprendizado prático**, **boas práticas DevOps** e **portfólio profissional para vagas DevOps Júnior**.
 
+![CI Status](https://github.com/danielviana2127/ci-cd-docker-lab/actions/workflows/ci.yml/badge.svg)
+
+
 ---
 
 ## 🎯 Objetivo do Projeto
