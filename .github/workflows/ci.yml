@@ -21,4 +21,5 @@ jobs:
           docker run -d -p 8080:80 --name test-container ci-cd-docker-lab
           sleep 5
           curl -f http://localhost:8080
-
+          docker stop test-container
+          docker rm test-container 
