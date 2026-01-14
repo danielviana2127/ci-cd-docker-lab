@@ -1,0 +1,24 @@
+name: CI Docker Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Build da imagem Docker
+        run: docker build -t ci-cd-docker-lab .
+
+      - name: Teste do container
+        run: |
+          docker run -d -p 8080:80 --name test-container ci-cd-docker-lab
+          sleep 5
+          curl -f http://localhost:8080
+
